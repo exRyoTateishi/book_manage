@@ -8,7 +8,7 @@
 
 # 実装に際して
 本のデータは、Google Books APIsを使って表示する  
-(https://www.googleapis.com/books/v1/volumes?q=【ここに書籍名】)  
+(https://www.googleapis.com/books/v1/volumes?q=【ここに書籍名】)
 
 スマートフォン対応にするため、レポンシブなサイトを作成する
 
@@ -18,5 +18,5 @@
 
 
 # ページリンク
-サイトのリンクは下記
+サイトのリンクは下記  
 (https://exryotateishi.github.io/book_manage/index/public.html)
