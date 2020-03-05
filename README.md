@@ -17,6 +17,6 @@
 (https://www.figma.com/file/Xw2NhjO7rK9ati7TE3DdJq/Untitled?node-id=0%3A1)
 
 
-#ページリンク
+# ページリンク
 サイトのリンクは下記
 (https://exryotateishi.github.io/book_manage/index/public.html)
