@@ -46,18 +46,15 @@
             </button>
         </form>
     </section>
-    <section id="read_book" class="s-contents">
-
-    </section>
-    <section id="request_book" class="main_wrapper">
-        <div v-for="item in items" class="w-50">
-            <div class="flex">
+    <section id="request_book" class="bookContent">
+        <ul class="">
+            <li v-for="item in items" class="">
                 <div>
                     <img v-bind:src="item.volumeInfo.imageLinks.thumbnail" alt="本の画像">
                 </div>
-                <div class="book-sub">
-                    <h5 class="mt-10">{{item.volumeInfo.title}}</h5>
-                    <div class="book-info m-auto">
+                <div>
+                    <h5 class="">{{item.volumeInfo.title}}</h5>
+                    <div class="">
                         著：
                             <span v-for="author in item.volumeInfo.authors">
                                 {{author}}
@@ -66,17 +63,12 @@
                         発行：{{item.volumeInfo.publisher}}<br />
                         発売：{{item.volumeInfo.publishedDate}}<br />
                     </div>
-                    <div class="m-view tr-c padding-8">
+                    <div class="">
                         詳しく見る
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-    <section>
-        <div id="app">
-            {{ message }}
-        </div>
+            </li>
+        </ul>
     </section>
     <script type="text/javascript" src="./js/index.js"></script>
 </body>
