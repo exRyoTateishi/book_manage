@@ -4,12 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>本をリクエスト | 細野研究室</title>
-    <link rel="stylesheet" href="./index.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="./doctor_reset.css">
+    <link rel="stylesheet" href="./index.css">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/axios@0.17.1/dist/axios.min.js"></script>
-
 </head>
 <body class="bg-header">
     <header class="bg-header m-width_1600 m-auto">
@@ -41,8 +38,8 @@
         </div>
     </header>
     <section id="book_search" class="s-contents">
-        <form class="search-form relative m-auto" action="自分のサイトURL" method="get">
-            <input v-model="search" class="search-box relative top-0 left-0" name="s" type="text" placeholder="本のタイトルを入力してください" />
+        <form v-on:submit.prevent="getResult(query)" class="search-form relative m-auto">
+            <input v-model="query" class="search-box relative top-0 left-0" name="s" type="text" placeholder="本のタイトルを入力してください" />
             <button class="search-btn absolute top-0" type="submit">
                 <i class="fas fa-search absolute"></i>
             </button>
@@ -50,9 +47,9 @@
         <div v-for="item in items" class="relative tr-c padding-8 f-10">
             <p>{{item}}</p>
         </div>
-        <p>{{search}}</p>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="./js/request.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.17.1/dist/axios.min.js"></script>
 </body>
 </html>
