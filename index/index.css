@@ -160,7 +160,6 @@ a{
 
 .bg-header{
     background: #BEF6FD;
-    width: 1080px;
 }
 .header{
     padding-top: 20px;
@@ -274,4 +273,40 @@ a{
 .header-icon > a:hover{
     text-decoration: none;
     color: black;
+}
+
+.bookContent {
+    width: 1080px;
+    margin: auto;
+}
+
+.bookContent_wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bookContentItem {
+    width: 400px;
+    margin: auto;
+    display: flex;
+    padding: 16px 8px;
+}
+
+.bookContentItem__img {
+    height: 180px;
+}
+
+.bookContentItem__detail {
+    padding: 8px;
+    letter-spacing: .1;
+}
+
+.bookContentItem__detailTitle {
+    font-weight: bold;
+    line-height: 1.2em;
+    margin-bottom: 6px;
+}
+
+.bookContentItem__detailText {
+    line-height: 1.2em;
 }
