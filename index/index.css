@@ -1,0 +1,277 @@
+a{
+    outline: none;
+}
+.padding-8 {
+    padding: 8px;
+}
+.border-8 {
+    border: double 10px;
+}
+.relative {
+    position: relative;
+}
+.absolute {
+    position: absolute;
+}
+.grid {
+    display: grid;
+}
+.flex {
+    display: flex;
+}
+.block {
+    display: block;
+}
+.inline-block {
+    display: inline-block;
+}
+.fixid {
+    position: fixed;
+}
+.ta-r {
+    text-align: right;
+}
+.tr-c {
+    text-align: center;
+}
+.ai-c {
+    align-items: center;
+}
+.va-c{
+    vertical-align: center;
+}
+.font {
+    font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "sans-serif";
+}
+.f-14{
+    font-size: 14px;
+}
+.f-16{
+    font-size: 16px;
+}
+.f-20{
+    font-size: 20px;
+}
+.f-28 {
+    font-size: 28px;
+}
+.float-left {
+    float: left;
+}
+.b-white {
+    background: white;
+}
+.b-black {
+    background-color: black;
+}
+.color-black {
+    color: black;
+}
+.color-white {
+    color: white;
+}
+.color-gray{
+    color: #666666;
+}
+.color-br{
+    color: #EB503C;
+}
+.w-40{
+    width: 40%;
+}
+.w-50{
+    width: 50%;
+}
+.w-60{
+    width: 60%;
+}
+.w-80 {
+    width: 80%;
+}
+.w-100 {
+    width: 100%;
+}
+.m-widht_1600 {
+    max-width: 1600px;
+}
+.left-0 {
+    left: 0;
+}
+.right-0{
+    right: 0;
+}
+.top-0{
+    top: 0;
+}
+.top-70 {
+    top: 70px;
+}
+.top-150{
+    top: 150px;
+}
+.bottom-0 {
+    bottom: 0;
+}
+.pd-5 {
+    padding: 5px;
+}
+.pt-20{
+    padding-top: 20px;
+}
+.pt-30 {
+    padding-top: 30px;
+}
+.mt-10{
+    margin-top: 10px;
+}
+.pt-70 {
+    padding-top: 70px;
+}
+.mb-70 {
+    margin-bottom: 70px;
+}
+.mb-80 {
+    margin-bottom: 80px;
+}
+.m-auto {
+    margin-right: auto;
+    margin-left: auto;
+}
+.fs-20 {
+    font-size: 20px;
+}
+.fs-40 {
+    font-size: 40px;
+}
+.v-top {
+    vertical-align: top;
+}
+.w-mode-rl{
+    writing-mode: vertical-rl;
+}
+.z-500 {
+    z-index: 500;
+}
+.sp-b {
+    justify-content: space-between;
+}
+
+
+
+.bg-header{
+    background: #BEF6FD;
+    width: 1080px;
+}
+.header{
+    padding-top: 20px;
+    padding-left: 25px
+}
+.header-icon{
+    width: 200px;
+}
+.side-header{
+    padding-right: 10px;
+}
+.side-header > span{
+    color: #666666;
+    font-size: 14px;
+}
+.sub-title{
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.2;
+    width: 100%;
+}
+.register{
+    width: 25%;
+    padding-left: 20px;
+}
+.register > a{
+    text-decoration: none;
+    line-height: 50px;
+    padding-right: 30px;
+}
+.s-contents{
+    padding-top: 30px;
+    padding-bottom: 100px;
+}
+
+.main_wrapper {
+    display: flex;
+    max-width: 1800px;
+    padding: 0 100px;
+}
+.grid-item {
+    height: 100%;
+    width: 50%;
+    justify-content: center;
+    margin-top: 24px;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    float: left;
+}
+.book-sub{
+    padding-left: 30px;
+}
+.book-sub > h5{
+    font-size: 15px;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+}
+.book-info{
+    margin-top: 30px;
+    line-height: 2em;
+    font-size: 14px;
+}
+.search-form {
+    max-width: 800px;
+    margin-bottom: 20px;
+}
+.search-box{
+    height: 50px;
+    width: 100%;
+    padding: 0 20px;
+    border-radius: 25px;
+    outline: none;
+    background: #eee;
+    border: none;
+}
+.search-btn{
+    height: 50px;
+    width: 50px;
+    right: 0;
+    background:#7fbfff;
+    color:#fff;
+    border-radius:0 25px 25px 0;
+    font-size: 20px;
+    border: none;
+}
+.fa-search {
+    font-size: 20px;
+    top: 30%;
+    left: 30%;
+    transition: 0.5s;
+}
+.search-btn:hover{
+    color: #666666;
+}
+.m-view{
+    margin-top: 20px;
+    border-radius: 25px;
+    width: 130px;
+    font-weight: 500;
+    background:#EB503C;
+    color: white;
+}
+
+
+/* request.html */
+.header-icon > a{
+    text-decoration: none;
+}
+.header-icon > a:hover{
+    text-decoration: none;
+    color: black;
+}
