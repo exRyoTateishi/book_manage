@@ -1,51 +1,74 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>本をリクエスト | 細野研究室</title>
-    <link rel="stylesheet" href="./doctor_reset.css">
-    <link rel="stylesheet" href="./index.css">
-    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-</head>
-<body class="bg-header">
-    <header class="bg-header m-width_1600 m-auto">
-        <div class="header flex relative">
-            <div class="header-icon f-28 relative tr-c">
-                <a class="color-black" href="./public.html">
-                    S.S.D.
-                    <span class="color-br tr-c">
-                        Library
-                    </span>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>本をリクエスト | 細野研究室</title>
+        <link rel="stylesheet" href="./index.css">
+        <link rel="stylesheet" href="./doctor_reset.css">
+        <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    </head>
+    <body id="requestTop" class="bg-header">
+         <header class="bg-header m-width_1600 m-auto">
+             <div class="header flex relative">
+                 <a class="" href="./public.html">
+                    <div class="header-icon f-28 relative tr-c">
+                        S.S.D.
+                        <span class="color-br tr-c">
+                            Library
+                        </span>
+                        <div class="sub-title relative tr-c">
+                            書籍管理システム
+                        </div>
+                    </div>
                 </a>
-                <div class="sub-title relative tr-c">
-                    書籍管理システム
-                </div>
-            </div>
-            <div class="register relative tr-c">
-                <a class="f-16 color-black" href="./register.html">
-                    本を登録する
+                 <div class="register relative tr-c">
+                     <a class="f-16 color-black" href="./register.html">
+                         本を登録する
+                     </a>
+                     <a class="request__bookRequest　f-16 color-black" href="#">
+                         本をリクエスト
+                     </a>
+                 </div>
+             </div>
+             <div class="side-header w-mode-rl top-150 right-0 color-black f-20">
+                 S.S.D.
+                 <span>DESIGN CREATING</span>
+                 <span>細野研究室</span>
+             </div>
+             <div class="pageTopItem">
+                 <a href="#requestTop">
+                    <span class="pageTopItem__text">page top</span>
+                    <p class="far fa-caret-square-up pageTopItem__far"></p>
                 </a>
-                <a class="f-16 color-black" href="./request.html">
-                    本をリクエスト
-                </a>
-            </div>
-        </div>
-        <div class="side-header w-mode-rl absolute top-150 right-0 color-black f-20">
-            S.S.D.
-            <span>DESIGN CREATING</span>
-            <span>細野研究室</span>
-        </div>
-    </header>
-    <section id="book_search" class="s-contents">
+             </div>
+         </header>
+        <section id="book_search" class="s-contents">
         <form v-on:submit.prevent="getResult(query)" class="search-form relative m-auto">
-            <input v-model="query" class="search-box relative top-0 left-0" name="s" type="text" placeholder="本のタイトルを入力してください" />
+            <input v-model="query" class="search-box absolute top-0 left-0" name="s" type="text" placeholder="本のタイトルを入力してください" />
             <button class="search-btn absolute top-0" type="submit">
                 <i class="fas fa-search absolute"></i>
             </button>
         </form>
-        <div v-for="item in items" class="relative tr-c padding-8 f-10">
-            <p>{{item}}</p>
+        <div id="request_book" class="bookContent">
+            <ul class="bookContent_wrapper">
+                <li v-for="item in items" class="bookContentItem">
+                    <div class="bookContentItem__img">
+                        <img v-bind:src="item.volumeInfo.imageLinks.thumbnail" alt="本の画像">
+                    </div>
+                    <div class="bookContentItem__detail">
+                        <h5 class="bookContentItem__detailTitle">{{item.volumeInfo.title}}</h5>
+                        <p class="bookContentItem__detailText">
+                            著者：<span v-for="author in item.volumeInfo.authors">
+                                <span v-if="author.length != 1">/</span>
+                                {{ author }}
+                            </span>
+                        </p>
+                        <p class="bookContentItem__detailText">発行：{{item.volumeInfo.publisher}}</p>
+                        <p class="bookContentItem__detailText">発売：{{item.volumeInfo.publishedDate}}</p>
+                    </div>
+                </li>
+            </ul>
         </div>
     </section>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>

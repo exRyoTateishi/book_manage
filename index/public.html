@@ -1,71 +1,78 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>書籍管理 | 細野研究室</title>
-    <link rel="stylesheet" href="./index.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="./doctor_reset.css">
-    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-</head>
-<body class="bg-header">
-    <header class="bg-header m-width_1600 m-auto">
-        <div class="header flex relative">
-            <div class="header-icon f-28 relative tr-c">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>書籍管理 | 細野研究室</title>
+        <link rel="stylesheet" href="./index.css">
+        <link rel="stylesheet" href="./doctor_reset.css">
+        <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    </head>
+
+    <body id="publicTop" class="bg-header">
+        <header class="bg-header m-width_1600 m-auto">
+            <div class="header flex relative">
+                <div class="header-icon f-28 relative tr-c">
+                    S.S.D.
+                    <span class="color-br tr-c">
+                        Library
+                    </span>
+                    <div class="sub-title relative tr-c">
+                        書籍管理システム
+                    </div>
+                </div>
+                <div class="register relative tr-c">
+                    <a class="f-16 color-black" href="./register.html">
+                        本を登録する
+                    </a>
+                    <a class="f-16 color-black" href="./request.html">
+                        本をリクエスト
+                    </a>
+                </div>
+            </div>
+            <div class="side-header w-mode-rl top-150 right-0 color-black f-20">
                 S.S.D.
-                <span class="color-br tr-c">
-                    Library
-                </span>
-                <div class="sub-title relative tr-c">
-                    書籍管理システム
-                </div>
+                <span>DESIGN CREATING</span>
+                <span>細野研究室</span>
             </div>
-            <div class="register relative tr-c">
-                <a class="f-16 color-black" href="./register.html">
-                    本を登録する
-                </a>
-                <a class="f-16 color-black" href="./request.html">
-                    本をリクエスト
+            <div class="pageTopItem">
+                <a href="#publicTop">
+                    <span class="pageTopItem__text">page top</span>
+                    <span class="far fa-caret-square-up pageTopItem__far"></span>
                 </a>
             </div>
-        </div>
-        <div class="side-header w-mode-rl absolute top-150 right-0 color-black f-20">
-            S.S.D.
-            <span>DESIGN CREATING</span>
-            <span>細野研究室</span>
-        </div>
-    </header>
-    <section id="search_book" class="s-contents">
-        <form class="search-form relative m-auto" action="自分のサイトURL" method="get">
-            <input class="search-box absolute top-0 left-0" name="s" type="text" placeholder="本のタイトルを入力してください" />
-            <button class="search-btn absolute top-0" type="submit" onclick="img()">
-                <i class="fas fa-search absolute"></i>
-            </button>
-        </form>
-    </section>
-    <section id="request_book" class="bookContent">
-        <ul class="bookContent_wrapper">
-            <li v-for="item in items" class="bookContentItem">
-                <div class="bookContentItem__img">
-                    <img v-bind:src="item.volumeInfo.imageLinks.thumbnail" alt="本の画像">
-                </div>
-                <div class="bookContentItem__detail">
-                    <h5 class="bookContentItem__detailTitle">{{item.volumeInfo.title}}</h5>
-                    <p class="bookContentItem__detailText">
-                        著者：<span v-for="author in item.volumeInfo.authors">
-                            <span v-if="author.length != 1">/</span>
-                            {{ author }}
+        </header>
+        <section id="search_book" class="s-contents">
+            <form class="search-form relative m-auto" action="自分のサイトURL" method="get">
+                <input class="search-box absolute top-0 left-0" name="s" type="text" placeholder="本のタイトルを入力してください" />
+                <button class="search-btn absolute top-0" type="submit" onclick="img()">
+                    <i class="fas fa-search absolute"></i>
+                </button>
+            </form>
+        </section>
+        <section id="request_book" class="bookContent">
+            <ul class="bookContent_wrapper">
+                <li v-for="item in items" class="bookContentItem">
+                    <div class="bookContentItem__img">
+                        <img v-bind:src="item.volumeInfo.imageLinks.thumbnail" alt="本の画像">
+                    </div>
+                    <div class="bookContentItem__detail">
+                        <h5 class="bookContentItem__detailTitle">{{item.volumeInfo.title}}</h5>
+                        <p class="bookContentItem__detailText">
+                            著者：<span v-for="author in item.volumeInfo.authors">
+                                <span v-if="author.length != 1">/</span>
+                                {{ author }}
                             </span>
-                    </p>
-                    <p class="bookContentItem__detailText">発行：{{item.volumeInfo.publisher}}</p>
-                    <p class="bookContentItem__detailText">発売：{{item.volumeInfo.publishedDate}}</p>
-                </div>
-            </li>
-        </ul>
-    </section>
-    <script type="text/javascript" src="./js/index.js"></script>
-</body>
+                        </p>
+                        <p class="bookContentItem__detailText">発行：{{item.volumeInfo.publisher}}</p>
+                        <p class="bookContentItem__detailText">発売：{{item.volumeInfo.publishedDate}}</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <script type="text/javascript" src="./js/index.js"></script>
+    </body>
+
 </html>
