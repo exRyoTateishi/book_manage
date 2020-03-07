@@ -1,14 +1,51 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <title>本を登録 | 細野研究室</title>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>本を登録 | 細野研究室</title>
+        <link rel="stylesheet" href="./index.css">
         <link rel="stylesheet" href="./doctor_reset.css">
         <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
         <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-</head>
-<body>
-    
-</body>
+    </head>
+
+    <body>
+        <header class="bg-header m-width_1600 m-auto">
+            <div class="header flex relative">
+                <a class="" href="./public.html">
+                    <div class="header-icon f-28 relative tr-c">
+                        S.S.D.
+                        <span class="color-br tr-c">
+                            Library
+                        </span>
+                        <div class="sub-title relative tr-c">
+                            書籍管理システム
+                        </div>
+                    </div>
+                </a>
+                <div class="register relative tr-c">
+                    <a class="f-16 color-black" href="./register.html">
+                        本を登録する
+                    </a>
+                    <a class="request__bookRequest　f-16 color-black" href="#">
+                        本をリクエスト
+                    </a>
+                </div>
+            </div>
+            <div class="side-header w-mode-rl top-150 right-0 color-black f-20">
+                S.S.D.
+                <span>DESIGN CREATING</span>
+                <span>細野研究室</span>
+            </div>
+            <div class="pageTopItem">
+                <a href="#requestTop">
+                    <span class="pageTopItem__text">page top</span>
+                    <p class="far fa-caret-square-up pageTopItem__far"></p>
+                </a>
+            </div>
+        </header>
+    </body>
+
 </html>

@@ -1,225 +1,286 @@
-html{
+html {
     /* スムーズスクロール */
     scroll-behavior: smooth;
 }
-body{
+
+body {
     font-family: -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    "Helvetica Neue",
-    Arial,
-    "Noto Sans",
-    sans-serif,
-    "Apple Color Emoji",
-    "Segoe UI Emoji",
-    "Segoe UI Symbol",
-    "Noto Color Emoji";
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        "Helvetica Neue",
+        Arial,
+        "Noto Sans",
+        sans-serif,
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
+        "Noto Color Emoji";
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
     color: #212529;
     text-align: left;
 }
+
 input,
-button{
+button {
     margin: 0;
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
 }
-a{
+
+a {
     outline: none;
     text-decoration: none;
     color: black;
 }
+
 .padding-8 {
     padding: 8px;
 }
+
 .border-8 {
     border: double 10px;
 }
+
 .relative {
     position: relative;
 }
+
 .absolute {
     position: absolute;
 }
+
 .grid {
     display: grid;
 }
+
 .flex {
     display: flex;
 }
+
 .block {
     display: block;
 }
+
 .inline-block {
     display: inline-block;
 }
+
 .fixid {
     position: fixed;
 }
+
 .ta-r {
     text-align: right;
 }
+
 .tr-c {
     text-align: center;
 }
+
 .ai-c {
     align-items: center;
 }
-.va-c{
+
+.va-c {
     vertical-align: center;
 }
+
 .font {
     font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", "sans-serif";
 }
-.f-14{
+
+.f-14 {
     font-size: 14px;
 }
-.f-16{
+
+.f-16 {
     font-size: 16px;
 }
-.f-20{
+
+.f-20 {
     font-size: 20px;
 }
+
 .f-28 {
     font-size: 28px;
 }
+
 .float-left {
     float: left;
 }
+
 .b-white {
     background: white;
 }
+
 .b-black {
     background-color: black;
 }
+
 .color-black {
     color: black;
 }
+
 .color-white {
     color: white;
 }
-.color-gray{
+
+.color-gray {
     color: #666666;
 }
-.color-br{
+
+.color-br {
     color: #EB503C;
 }
-.w-40{
+
+.w-40 {
     width: 40%;
 }
-.w-50{
+
+.w-50 {
     width: 50%;
 }
-.w-60{
+
+.w-60 {
     width: 60%;
 }
+
 .w-80 {
     width: 80%;
 }
+
 .w-100 {
     width: 100%;
 }
+
 .m-widht_1600 {
     max-width: 1600px;
 }
+
 .left-0 {
     left: 0;
 }
-.right-0{
+
+.right-0 {
     right: 0;
 }
-.top-0{
+
+.top-0 {
     top: 0;
 }
+
 .top-70 {
     top: 70px;
 }
-.top-150{
+
+.top-150 {
     top: 150px;
 }
+
 .bottom-0 {
     bottom: 0;
 }
+
 .pd-5 {
     padding: 5px;
 }
-.pt-20{
+
+.pt-20 {
     padding-top: 20px;
 }
+
 .pt-30 {
     padding-top: 30px;
 }
-.mt-10{
+
+.mt-10 {
     margin-top: 10px;
 }
+
 .pt-70 {
     padding-top: 70px;
 }
+
 .mb-70 {
     margin-bottom: 70px;
 }
+
 .mb-80 {
     margin-bottom: 80px;
 }
+
 .m-auto {
     margin-right: auto;
     margin-left: auto;
 }
+
 .fs-20 {
     font-size: 20px;
 }
+
 .fs-40 {
     font-size: 40px;
 }
+
 .v-top {
     vertical-align: top;
 }
-.w-mode-rl{
+
+.w-mode-rl {
     writing-mode: vertical-rl;
 }
+
 .z-500 {
     z-index: 500;
 }
+
 .sp-b {
     justify-content: space-between;
 }
 
 
 
-.bg-header{
+.bg-header {
     background: #BEF6FD;
 }
-.header{
+
+.header {
     padding-top: 20px;
     padding-left: 25px;
 }
-.header-icon{
+
+.header-icon {
     width: 200px;
     box-sizing: border-box;
-    cursor: default;
+    cursor: pointer;
 }
-.side-header{
+
+.side-header {
     padding-right: 10px;
     position: fixed;
 }
-.side-header > span{
+
+.side-header>span {
     color: #666666;
     font-size: 14px;
 }
+
 .pageTopItem {
     width: 30px;
     position: fixed;
     right: 18px;
     bottom: 18px;
 }
-.pageTopItem > a:hover{
+
+.pageTopItem>a:hover {
     color: #666666;
     transition-timing-function: ease;
 }
+
 .pageTopItem__text {
     transition-timing-function: ease;
     writing-mode: vertical-rl;
@@ -229,30 +290,36 @@ a{
     padding-bottom: 7px;
     font-size: 18px;
 }
-.pageTopItem__far{
+
+.pageTopItem__far {
     font-size: 32px;
     margin-right: 10px;
     display: inline-block;
 }
-.sub-title{
+
+.sub-title {
     font-size: 18px;
     font-weight: 500;
     letter-spacing: 0.2;
     width: 100%;
 }
-.register{
+
+.register {
     width: 25%;
     padding-left: 20px;
 }
-.register > a{
+
+.register>a {
     text-decoration: none;
     line-height: 50px;
     padding-right: 30px;
 }
-.register > a:hover{
+
+.register>a:hover {
     font-weight: 600;
 }
-.s-contents{
+
+.s-contents {
     padding-top: 30px;
     padding-bottom: 50px;
 }
@@ -262,6 +329,7 @@ a{
     max-width: 1800px;
     padding: 0 100px;
 }
+
 .grid-item {
     height: 100%;
     width: 50%;
@@ -273,25 +341,30 @@ a{
     padding-bottom: 20px;
     float: left;
 }
-.book-sub{
+
+.book-sub {
     padding-left: 30px;
 }
-.book-sub > h5{
+
+.book-sub>h5 {
     font-size: 15px;
     letter-spacing: 0.05em;
     font-weight: 600;
 }
-.book-info{
+
+.book-info {
     margin-top: 30px;
     line-height: 2em;
     font-size: 14px;
 }
+
 .search-form {
     max-width: 800px;
     margin-bottom: 100px;
     box-sizing: border-box;
 }
-.search-box{
+
+.search-box {
     height: 50px;
     width: 95%;
     padding: 0 20px;
@@ -300,44 +373,50 @@ a{
     background: #eee;
     border: none;
 }
-.search-btn{
+
+.search-btn {
     height: 50px;
     width: 50px;
     right: 0;
-    background:#7fbfff;
-    color:#fff;
-    border-radius:0 25px 25px 0;
+    background: #7fbfff;
+    color: #fff;
+    border-radius: 0 25px 25px 0;
     font-size: 20px;
     border: none;
     box-sizing: border-box;
 }
+
 .fa-search {
     font-size: 20px;
     top: 30%;
     left: 30%;
     transition: 0.5s;
 }
-.search-btn:hover{
+
+.search-btn:hover {
     color: #666666;
 }
-.m-view{
+
+.m-view {
     margin-top: 20px;
     border-radius: 25px;
     width: 130px;
     font-weight: 500;
-    background:#EB503C;
+    background: #EB503C;
     color: white;
 }
 
 
 /* request.html */
-.request__bookRequest{
+.request__bookRequest {
     text-decoration: line-through;
 }
-.header-icon > a{
+
+.header-icon>a {
     text-decoration: none;
 }
-.header-icon > a:hover{
+
+.header-icon>a:hover {
     text-decoration: none;
     color: black;
 }
@@ -345,6 +424,7 @@ a{
 .bookContent {
     width: 1080px;
     margin: auto;
+    padding-bottom: 100px;
 }
 
 .bookContent_wrapper {
@@ -377,7 +457,3 @@ a{
 .bookContentItem__detailText {
     line-height: 1.2em;
 }
-
-
-
-
